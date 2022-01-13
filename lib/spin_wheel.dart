@@ -30,7 +30,7 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
         children: [
           Container(
             height: 400,
-            padding: EdgeInsets.only(top: 50.0),
+            padding: const EdgeInsets.only(top: 50.0),
             child: Stack(
               alignment: Alignment.center,
               children: [
@@ -42,7 +42,7 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                       FortuneItem(
                         style: FortuneItemStyle(
                             color: Colors.yellow[700]!, borderWidth: 0),
-                        child: Text(
+                        child: const Text(
                           "RS. 100",
                           style: TextStyle(fontSize: 20.0),
                         ),
@@ -50,12 +50,12 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                       FortuneItem(
                           style: FortuneItemStyle(
                               color: Colors.green[300]!, borderWidth: 0),
-                          child: Text(
+                          child: const Text(
                             "Better Luck\nnext time",
                             style: TextStyle(fontSize: 20.0),
                           )),
                       FortuneItem(
-                        child: Text(
+                        child: const Text(
                           "Rs. 200",
                           style: TextStyle(fontSize: 20.0),
                         ),
@@ -63,7 +63,7 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                             color: Colors.blue.shade600, borderWidth: 0),
                       ),
                       FortuneItem(
-                        child: Text(
+                        child: const Text(
                           "Rs. 300",
                           style: TextStyle(fontSize: 20.0),
                         ),
@@ -71,14 +71,14 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                             color: Colors.red.shade400, borderWidth: 0),
                       ),
                       FortuneItem(
-                        child: Text(
+                        child: const Text(
                           "Rs. 400",
                           style: TextStyle(fontSize: 20.0),
                         ),
                         style: FortuneItemStyle(
                             color: Colors.indigo[400]!, borderWidth: 0),
                       ),
-                      FortuneItem(
+                      const FortuneItem(
                         child: Text(
                           "Rs. 500",
                           style: TextStyle(fontSize: 20.0),
@@ -90,7 +90,6 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                 GestureDetector(
                   onTap: () {
                     int a = Random().nextInt(6);
-                    print(a);
                     controller.add(a);
                   },
                   child: Stack(

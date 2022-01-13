@@ -99,39 +99,51 @@ class FortuneWheel extends HookWidget implements FortuneWidget {
   static const StyleStrategy kDefaultStyleStrategy = AlternatingStyleStrategy();
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.items}
+  @override
   final List<FortuneItem> items;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.selected}
+  @override
   final Stream<int> selected;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.rotationCount}
+  @override
   final int rotationCount;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.duration}
+  @override
   final Duration duration;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.indicators}
+  @override
   final List<FortuneIndicator> indicators;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.animationType}
+  @override
   final Curve curve;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.onAnimationStart}
+  @override
   final VoidCallback? onAnimationStart;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.onAnimationEnd}
+  @override
   final VoidCallback? onAnimationEnd;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.styleStrategy}
+  @override
   final StyleStrategy styleStrategy;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.animateFirst}
+  @override
   final bool animateFirst;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.physics}
+  @override
   final PanPhysics physics;
 
   /// {@macro flutter_fortune_wheel.FortuneWidget.onFling}
+  @override
   final VoidCallback? onFling;
 
   /// The position to which the wheel aligns the selected value.

@@ -42,7 +42,7 @@ class _CircleSlicePainter extends CustomPainter {
         Path()
           ..arcTo(
               Rect.fromCircle(
-                center: Offset(0, 0),
+                center: const Offset(0, 0),
                 radius: radius,
               ),
               0,

@@ -7,7 +7,7 @@ class _CircleSlice extends StatelessWidget {
       ..lineTo(radius, 0)
       ..arcTo(
           Rect.fromCircle(
-            center: Offset(0, 0),
+            center: const Offset(0, 0),
             radius: radius,
           ),
           0,
