@@ -18,6 +18,8 @@ class SpinTheWheel extends StatefulWidget {
 class _SpinTheWheelState extends State<SpinTheWheel> {
   StreamController<int> controller = StreamController<int>();
 
+  bool isAnimating = false;
+
   List<String> win = [];
   List<String> prize = [
     "Rs. 100",
@@ -69,6 +71,7 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                       children: [
                         FortuneWheel(
                             onAnimationEnd: () {
+                              isAnimating = false;
                               setState(() {});
                             },
                             // curve: Curves.bounceInOut,
@@ -83,10 +86,12 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                                         e,
                                         style: TextStyle(
                                             fontSize: 18.0,
-                                            fontWeight: win.last == e
+                                            fontWeight: (win.isNotEmpty &&
+                                                    win.last == e)
                                                 ? FontWeight.bold
                                                 : FontWeight.normal,
-                                            color: win.last == e
+                                            color: (win.isNotEmpty &&
+                                                    win.last == e)
                                                 ? Colors.white
                                                 : Colors.white70),
                                       ),
@@ -94,6 +99,9 @@ class _SpinTheWheelState extends State<SpinTheWheel> {
                                 .toList()),
                         GestureDetector(
                           onTap: () {
+                            if (isAnimating) return;
+                            isAnimating = true;
+
                             int a = Random().nextInt(6);
 
                             win.add(prize[a]);
